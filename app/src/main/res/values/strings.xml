@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">效果拔群的绿化器</string>
+    <string name="original_image">Original Image</string>
+    <string name="processed_image">Processed Image</string>
+    <string name="quality">Quality</string>
+    <string name="time_s">Time(s)</string>
+</resources>

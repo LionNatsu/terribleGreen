@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.lion.myapplication.MainActivity">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tableLayout"
+        android:paddingBottom="20dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/quality"
+                android:id="@+id/textView3"
+                android:labelFor="@+id/seekBarQuality"
+                android:singleLine="true"
+                android:layout_weight="1" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBarQuality"
+                android:progress="0"
+                android:max="100"
+                android:paddingBottom="5dp"
+                android:layout_weight="8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textValueQuality"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:layout_gravity="right" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/time_s"
+                android:id="@+id/textView4"
+                android:labelFor="@+id/seekBarRepeat"
+                android:singleLine="true"
+                android:layout_weight="1" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBarRepeat"
+                android:progress="0"
+                android:max="50"
+                android:paddingBottom="5dp"
+                android:layout_weight="8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textValueRepeat"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:layout_gravity="right" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/linearLayout"
+        android:onClick="btOnClick"
+        android:nestedScrollingEnabled="false"
+        android:focusable="false"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tableLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewOrigin"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/original_image"
+            android:padding="2dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewGreen"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/processed_image"
+            android:padding="2dp" />
+    </LinearLayout>
+</RelativeLayout>
